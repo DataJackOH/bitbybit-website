@@ -1,5 +1,5 @@
 interface FeatureCardProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
 }
@@ -7,7 +7,7 @@ interface FeatureCardProps {
 export default function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-sage/10 text-2xl">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-sage/10 text-sage">
         {icon}
       </div>
       <h3 className="font-heading text-lg font-bold text-charcoal">{title}</h3>

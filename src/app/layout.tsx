@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "calisthenics app",
     "workout tracker",
   ],
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -44,12 +48,19 @@ export const metadata: Metadata = {
     title: "bit by bit — Personalized Calisthenics Training",
     description:
       "Master calisthenics with personalized workout plans that adapt to your progress. No trainer needed.",
+    images: [
+      {
+        url: "/og-image.png",
+        alt: "bit by bit — Calisthenics Training App",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "bit by bit — Personalized Calisthenics Training",
     description:
       "Master calisthenics with personalized workout plans that adapt to your progress.",
+    images: ["/og-image.png"],
   },
   metadataBase: new URL("https://bitbybit.fit"),
 };

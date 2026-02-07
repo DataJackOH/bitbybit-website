@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Target, TrendingUp, Trophy } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
 import CTABanner from "@/components/CTABanner";
 
@@ -25,19 +26,19 @@ const steps = [
 
 const features = [
   {
-    icon: "🎯",
+    icon: <Target size={24} />,
     title: "Personalized Plans",
     description:
-      "Workouts that adapt to YOUR fitness level — not a one-size-fits-all program.",
+      "Workouts that adapt to your fitness level — not a one-size-fits-all program.",
   },
   {
-    icon: "📈",
+    icon: <TrendingUp size={24} />,
     title: "Real-Time Adaptation",
     description:
       "The app adjusts your next workout based on how you performed today.",
   },
   {
-    icon: "🏆",
+    icon: <Trophy size={24} />,
     title: "Achievement System",
     description:
       "Earn badges and hit milestones that keep you motivated and consistent.",

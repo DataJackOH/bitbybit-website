@@ -101,36 +101,16 @@ export default function PrivacyPage() {
               We collect anonymised usage data to understand how people use the
               app and improve the experience. This includes:
             </p>
-            <ul className="mt-3 list-inside list-disc space-y-2">
-              <li>Screen views and navigation patterns</li>
-              <li>
-                Feature usage (e.g. workout completions, exercise library
-                searches)
-              </li>
-              <li>
-                Engagement events (e.g. streak milestones, achievement unlocks)
-              </li>
-              <li>Error events (to identify and fix bugs)</li>
-              <li>
-                Subscription-related events (e.g. paywall views, trial starts)
-              </li>
-            </ul>
             <p className="mt-3">
-              Analytics data is associated with a random device identifier, not
-              your name or email. See the &quot;Analytics&quot; section below for
-              more detail.
+              This may include screen views, feature usage, error reports, and
+              subscription-related events. Analytics data is associated with a
+              random device identifier, not your name or email. See the
+              &quot;Analytics&quot; section below for more detail.
             </p>
 
-            <h3 className="mt-6 font-heading text-base font-bold text-charcoal/90">
-              Data We Do NOT Collect
-            </h3>
-            <ul className="mt-2 list-inside list-disc space-y-2">
-              <li>Location data</li>
-              <li>Health or HealthKit data</li>
-              <li>Contacts</li>
-              <li>Browsing history</li>
-              <li>Data for advertising purposes</li>
-            </ul>
+            <p className="mt-4">
+              We do <strong>not</strong> collect data for advertising purposes.
+            </p>
           </div>
 
           {/* How We Use Your Data */}
@@ -318,33 +298,12 @@ export default function PrivacyPage() {
             </p>
 
             <p className="mt-3">
-              <strong>What we track:</strong>
-            </p>
-            <ul className="mt-2 list-inside list-disc space-y-2">
-              <li>Which screens you visit and how you navigate</li>
-              <li>
-                When you complete workouts, view exercises, or earn achievements
-              </li>
-              <li>When errors occur (so we can fix them)</li>
-              <li>Subscription events (paywall views, trial activations)</li>
-            </ul>
-
-            <p className="mt-4">
-              <strong>What we don&apos;t track:</strong>
-            </p>
-            <ul className="mt-2 list-inside list-disc space-y-2">
-              <li>
-                Your specific exercises, reps, or workout details in analytics
-              </li>
-              <li>Your name or email in analytics events</li>
-              <li>Anything for advertising purposes</li>
-            </ul>
-
-            <p className="mt-4">
-              Analytics events are associated with a randomly generated device
-              identifier. We use this data in aggregate (e.g. &quot;60% of users
-              complete their first workout within 3 days&quot;) to make product
-              decisions. We do not build individual profiles from analytics data.
+              Analytics events may include screen views, feature usage,
+              error reports, and subscription-related events. Events are
+              associated with a randomly generated device identifier, not your
+              name or email. We use this data in aggregate to make product
+              decisions. We do not build individual profiles from analytics data
+              or use analytics for advertising.
             </p>
             <p className="mt-3">
               You cannot currently opt out of analytics within the app. If this
@@ -359,19 +318,10 @@ export default function PrivacyPage() {
               Data Storage &amp; Sync
             </h2>
             <p className="mt-3">
-              <strong>Local-first architecture:</strong> Your workout data is
-              always stored on your device first. The app works fully offline.
-            </p>
-            <p className="mt-3">
-              <strong>Cloud sync:</strong> If you&apos;re signed in, your data is
-              also synced to Cloud Firestore (Google) so it&apos;s backed up and
-              available across devices. This includes your profile, fitness
-              assessment, workout history, progress records, achievements, and
-              preferences.
-            </p>
-            <p className="mt-3">
-              <strong>Profile photos:</strong> Stored in Firebase Storage (Google
-              Cloud).
+              Your data is stored on your device and, when you&apos;re signed
+              in, synced to Cloud Firestore (Google) so it&apos;s backed up
+              and available across devices. Profile photos are stored in
+              Firebase Storage (Google Cloud).
             </p>
             <p className="mt-3">
               <strong>Data in transit:</strong> All data transferred between your
@@ -555,22 +505,21 @@ export default function PrivacyPage() {
               <strong>Profile &gt; Settings</strong> within the app. When you
               delete your account:
             </p>
-            <ol className="mt-3 list-inside list-decimal space-y-2">
+            <ul className="mt-3 list-inside list-disc space-y-2">
               <li>
                 Your profile, workout data, and progress are permanently deleted
                 from our servers
               </li>
-              <li>Your Firebase Authentication account is removed</li>
-              <li>Your profile photo (if any) is deleted from storage</li>
+              <li>Your authentication account is removed</li>
               <li>
-                RevenueCat retains anonymised transaction records for financial
-                compliance
+                Third-party services (e.g. RevenueCat) may retain anonymised
+                transaction records as required for financial compliance
               </li>
               <li>
                 Previously aggregated analytics data cannot be individually
-                removed but is not identifiable
+                removed but is not personally identifiable
               </li>
-            </ol>
+            </ul>
             <p className="mt-3">
               Active subscriptions are not automatically cancelled when you
               delete your account. Manage your subscription through{" "}
