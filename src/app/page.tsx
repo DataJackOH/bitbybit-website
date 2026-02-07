@@ -45,9 +45,31 @@ const features = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "bit by bit",
+  applicationCategory: "HealthApplication",
+  operatingSystem: "iOS",
+  description:
+    "Personalized calisthenics training app that adapts to your progress. Pull-ups, push-ups, squats, handstands, and more.",
+  url: "https://bitbybit.fit",
+  image: "https://bitbybit.fit/og-image.png",
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/PreOrder",
+    price: "0",
+    priceCurrency: "AUD",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="px-6 pb-16 pt-20 md:pb-24 md:pt-28">
         <div className="mx-auto max-w-6xl">
