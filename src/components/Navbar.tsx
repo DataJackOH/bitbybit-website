@@ -13,7 +13,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-charcoal/5 bg-offwhite/95 backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 border-b border-charcoal/5 bg-offwhite/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-heading text-2xl font-bold text-charcoal">
           bit by bit
@@ -25,14 +25,11 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-charcoal/70 transition-colors hover:text-charcoal"
+              className="relative text-sm font-medium text-charcoal/70 transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-sage after:transition-all after:duration-200 hover:text-charcoal hover:after:w-full"
             >
               {link.label}
             </Link>
           ))}
-          <span className="rounded-full bg-coral px-4 py-1.5 text-xs font-semibold text-white">
-            Coming Soon
-          </span>
         </div>
 
         {/* Mobile hamburger */}
@@ -66,9 +63,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <span className="mt-2 inline-block rounded-full bg-coral px-4 py-1.5 text-xs font-semibold text-white">
-            Coming Soon
-          </span>
         </div>
       )}
     </nav>

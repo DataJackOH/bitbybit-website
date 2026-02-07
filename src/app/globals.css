@@ -6,6 +6,7 @@
   --color-coral: #F8716B;
   --color-coral-dark: #E5605A;
   --color-offwhite: #F9F7F4;
+  --color-offwhite-warm: #F7F4EF;
   --color-charcoal: #333333;
   --color-white: #FFFFFF;
 }
@@ -16,6 +17,7 @@
   --color-coral: var(--color-coral);
   --color-coral-dark: var(--color-coral-dark);
   --color-offwhite: var(--color-offwhite);
+  --color-offwhite-warm: var(--color-offwhite-warm);
   --color-charcoal: var(--color-charcoal);
   --font-heading: var(--font-league-spartan);
   --font-body: var(--font-inter);
@@ -29,4 +31,19 @@ body {
   background: var(--color-offwhite);
   color: var(--color-charcoal);
   font-family: var(--font-body), system-ui, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
 }

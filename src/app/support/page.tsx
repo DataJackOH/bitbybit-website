@@ -4,7 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Get help with bit by bit. Find answers to frequently asked questions or contact our support team.",
+    "Get help with bit by bit. Find answers to frequently asked questions.",
 };
 
 const faqs = [
@@ -66,15 +66,14 @@ export default function SupportPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* FAQ Section */}
-      <section className="px-6 pb-16 pt-20 md:pb-24 md:pt-28">
+      <section className="px-6 pb-20 pt-20 md:pb-28 md:pt-28">
         <div className="mx-auto max-w-3xl">
           <div className="text-center">
             <h1 className="font-heading text-4xl font-bold text-charcoal md:text-5xl">
               Support
             </h1>
             <p className="mt-5 text-lg text-charcoal/60">
-              Find answers to common questions below, or reach out to us
-              directly.
+              Find answers to common questions below.
             </p>
           </div>
 
@@ -90,56 +89,6 @@ export default function SupportPage() {
                   answer={faq.answer}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="bg-white px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-heading text-2xl font-bold text-charcoal">
-            Contact Us
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-charcoal/60">
-            Can&apos;t find what you&apos;re looking for? We&apos;re happy to help.
-          </p>
-
-          <div className="mt-8 space-y-6">
-            <div className="rounded-2xl border border-charcoal/5 bg-offwhite p-6">
-              <h3 className="font-heading text-base font-bold text-charcoal">
-                General Support
-              </h3>
-              <p className="mt-2 text-sm text-charcoal/60">
-                For questions, feedback, or help with the app:
-              </p>
-              <a
-                href="mailto:support@bitbybit.fit"
-                className="mt-3 inline-block text-sm font-semibold text-sage transition-colors hover:text-sage-dark"
-              >
-                support@bitbybit.fit
-              </a>
-            </div>
-
-            <div className="rounded-2xl border border-charcoal/5 bg-offwhite p-6">
-              <h3 className="font-heading text-base font-bold text-charcoal">
-                Bug Reports
-              </h3>
-              <p className="mt-2 text-sm text-charcoal/60">
-                Found a bug? Please email us with:
-              </p>
-              <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-charcoal/60">
-                <li>A description of what happened</li>
-                <li>What you expected to happen</li>
-                <li>Your device model and iOS version</li>
-                <li>Screenshots if possible</li>
-              </ul>
-              <a
-                href="mailto:support@bitbybit.fit"
-                className="mt-3 inline-block text-sm font-semibold text-sage transition-colors hover:text-sage-dark"
-              >
-                support@bitbybit.fit
-              </a>
             </div>
           </div>
         </div>
