@@ -4,10 +4,8 @@ import {
   Target,
   Dumbbell,
   TrendingUp,
-  Trophy,
   Timer,
   WifiOff,
-  Medal,
   BookOpen,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
@@ -32,13 +30,6 @@ const secondaryFeatures = [
     description:
       "Train anywhere. Data syncs when you're back online.",
     accent: "coral" as const,
-  },
-  {
-    icon: <Medal size={20} />,
-    title: "Achievements",
-    description:
-      "Earn badges for streaks, milestones, and personal records.",
-    accent: "sage" as const,
   },
   {
     icon: <BookOpen size={20} />,
