@@ -99,13 +99,11 @@ export default function PrivacyPage() {
             </h3>
             <p className="mt-2">
               We collect anonymised usage data to understand how people use the
-              app and improve the experience. This includes:
-            </p>
-            <p className="mt-3">
-              This may include screen views, feature usage, error reports, and
-              subscription-related events. Analytics data is associated with a
-              random device identifier, not your name or email. See the
-              &quot;Analytics&quot; section below for more detail.
+              app and improve the experience. This may include screen views,
+              feature usage, error reports, and subscription-related events.
+              Analytics data is associated with a random device identifier, not
+              your name or email. See the &quot;Analytics&quot; section below for
+              more detail.
             </p>
 
             <p className="mt-4">
@@ -151,7 +149,7 @@ export default function PrivacyPage() {
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">Manage your subscription</td>
-                    <td className="py-2">Firebase UID, purchase history</td>
+                    <td className="py-2">Anonymous user ID, purchase history</td>
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">Improve the app</td>
@@ -224,10 +222,9 @@ export default function PrivacyPage() {
               RevenueCat
             </h3>
             <p className="mt-2">
-              RevenueCat manages our subscription system. We share your Firebase
-              user ID (a random identifier, not your email) and purchase and
-              subscription status (processed through Apple&apos;s App Store).
-              RevenueCat does not receive your name, email, or fitness data. See{" "}
+              RevenueCat manages our subscription system. We share an anonymous
+              user identifier and subscription status (processed through
+              Apple&apos;s App Store). See{" "}
               <a
                 href="https://www.revenuecat.com/privacy/"
                 className="font-medium text-sage underline"
@@ -329,8 +326,7 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-3">
               <strong>Data at rest:</strong> Stored in Google Cloud&apos;s
-              infrastructure with Google&apos;s standard encryption. Data is
-              primarily stored in Google&apos;s US data centres.
+              infrastructure with Google&apos;s standard encryption.
             </p>
           </div>
 
@@ -351,9 +347,9 @@ export default function PrivacyPage() {
                 individually removed, but it is not personally identifiable
               </li>
               <li>
-                <strong>Subscription data:</strong> RevenueCat retains
-                transaction records as required for financial compliance, even
-                after account deletion
+                <strong>Subscription data:</strong> Third-party subscription
+                providers may retain transaction records as required for
+                financial compliance, even after account deletion
               </li>
             </ul>
           </div>

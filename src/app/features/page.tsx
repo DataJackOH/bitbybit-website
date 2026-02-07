@@ -51,9 +51,9 @@ const features = [
   },
   {
     icon: <WifiOff size={24} />,
-    title: "Offline First",
+    title: "Works Offline",
     description:
-      "All workouts and data are stored on your device. Train anywhere — park, gym, or home — with or without an internet connection.",
+      "Your data is stored on your device and synced to the cloud when signed in. Train anywhere — park, gym, or home — with or without an internet connection.",
   },
   {
     icon: <Medal size={24} />,
@@ -65,7 +65,7 @@ const features = [
     icon: <BookOpen size={24} />,
     title: "Exercise Library",
     description:
-      "24+ exercises with detailed instructions for every movement. Learn proper form so you can train safely and effectively.",
+      "Hundreds of exercises with detailed instructions for every movement. Learn proper form so you can train safely and effectively.",
   },
 ];
 
