@@ -14,9 +14,9 @@ const faqs = [
       "bit by bit is a calisthenics training app that creates personalized workout plans based on your fitness level and goals. Whether you want to do your first pull-up or master advanced bodyweight skills, the app builds a plan just for you and adapts it as you progress.",
   },
   {
-    question: "Is the app free?",
+    question: "How much does it cost?",
     answer:
-      "bit by bit will be free to download with core features included. We believe everyone should have access to quality training. We may introduce optional premium features in the future, but the core training experience will always be free.",
+      "bit by bit requires a subscription to use. We offer a free trial so you can try the full experience before committing. Subscriptions are billed through the Apple App Store — you can view pricing and trial details on the subscription page within the app.",
   },
   {
     question: "What equipment do I need?",
@@ -31,12 +31,12 @@ const faqs = [
   {
     question: "Can I use it offline?",
     answer:
-      "Yes! bit by bit is offline-first. All your workout data is stored on your device, so you can train in the park, at home, or anywhere without needing an internet connection.",
+      "Yes! bit by bit is offline-first. Your workout data is always stored on your device first, so you can train anywhere without an internet connection. When you're online and signed in, your data syncs to the cloud so it's backed up and available across devices.",
   },
   {
     question: "How do I delete my account?",
     answer:
-      "You can delete your account from the Settings screen within the app. This permanently removes your authentication data from our servers. Your workout data is stored locally on your device and is removed when you uninstall the app.",
+      "You can delete your account from Profile > Settings within the app. This permanently removes your profile, workout history, and progress data from our servers, along with your authentication account. Remember to cancel your subscription through Apple Settings before deleting your account.",
   },
   {
     question: "What devices are supported?",
