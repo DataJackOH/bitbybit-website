@@ -239,12 +239,12 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-bold text-charcoal">
-                    Works offline. Your data stays yours.
+                    Built only for calisthenics
                   </h3>
                   <p className="mt-2 leading-relaxed text-charcoal/60">
-                    Train at the park, the gym, or your living room — no
-                    internet required. Everything is stored on your device first.
-                    Cloud sync is optional, not mandatory.
+                    Not a generic gym app with bodyweight bolted on. Every
+                    feature — from progression chains to workout structure — is
+                    designed around how calisthenics actually works.
                   </p>
                 </div>
               </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
               personalization.
             </blockquote>
             <p className="mt-6 font-heading text-base font-bold text-sage">
-              — Jack, founder of bit by bit
+              — Tobey, founder of bit by bit
             </p>
           </div>
         </div>
