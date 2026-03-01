@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "bodyweight exercises",
     "calisthenics app",
     "workout tracker",
+    "beginner calisthenics",
+    "free workout app",
+    "calisthenics for beginners",
+    "no equipment workout",
   ],
   icons: {
     icon: "/icon.png",
@@ -66,6 +70,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bitbybit.fit"),
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "bit by bit",
+  url: "https://bitbybit.fit",
+  logo: "https://bitbybit.fit/icon.png",
+  description: "Personalized calisthenics training app",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,6 +86,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+      </head>
       <body
         className={`${leagueSpartan.variable} ${inter.variable} antialiased`}
       >

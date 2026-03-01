@@ -1,13 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Target, Footprints, Smartphone } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "bit by bit",
   applicationCategory: "HealthApplication",
+  applicationSubCategory: "Fitness",
   operatingSystem: "iOS",
   description:
     "Personalized calisthenics training app that adapts to your progress. Pull-ups, push-ups, squats, handstands, and more.",
@@ -42,13 +50,26 @@ export default function HomePage() {
                 <span className="text-sage">Your Way</span>
               </h1>
               <p className="mt-5 text-lg text-charcoal/60">
-                Personalized workout plans that adapt to your progress. No
-                trainer needed.
+                Free personalized calisthenics plans that adapt to your level.
+                Pull-ups, push-ups, handstands — no trainer needed.
+              </p>
+              <p className="mt-3 text-sm font-medium text-charcoal/40">
+                525 exercises · Infinite progressions · Works offline
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
-                <span className="inline-flex items-center justify-center rounded-full bg-coral px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-coral/25">
-                  Coming Soon to the App Store
-                </span>
+                <a
+                  href="https://apps.apple.com/app/bit-by-bit/id6756225068"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/app-store-badge.svg"
+                    alt="Download on the App Store"
+                    width={150}
+                    height={50}
+                    className="h-[50px] w-auto"
+                  />
+                </a>
               </div>
             </div>
 
@@ -56,13 +77,13 @@ export default function HomePage() {
             <div className="relative shrink-0">
               <div className="overflow-hidden rounded-[2.5rem] border-2 border-charcoal/10 bg-charcoal shadow-xl">
                 <Image
-                  src="/screenshots/home.png"
-                  alt="bit by bit home screen showing today's workout and goal progress"
+                  src="/screenshots/workout.png"
+                  alt="bit by bit workout screen showing exercises, sets, and reps"
                   width={603}
                   height={1191}
                   className="w-[240px] rounded-[2.3rem] md:w-[280px]"
                   priority
-                  unoptimized
+                  sizes="(max-width: 768px) 240px, 280px"
                 />
               </div>
             </div>
@@ -81,69 +102,83 @@ export default function HomePage() {
             improvement over time.
           </p>
 
-          <div className="mt-16 grid gap-12 md:grid-cols-3 md:gap-8">
+          {/* Mobile: horizontal scroll, Desktop: 3-col grid */}
+          <div className="scrollbar-hide -mx-6 mt-16 flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 pb-4 md:pb-0">
             {/* Step 1 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/workout.png"
-                  alt="Workout preview showing exercises, difficulty, and duration"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  unoptimized
-                />
+            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
+              <div className="flex flex-col items-center text-center">
+                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                  <Image
+                    src="/screenshots/home.png"
+                    alt="Home screen showing today's workout, upcoming sessions, and your goals"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 75vw, 33vw"
+                  />
+                </div>
+                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
+                  Your Daily Plan
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
+                  See today&apos;s workout, what&apos;s coming next, and your
+                  current goals — all in one place.
+                </p>
               </div>
-              <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                Workouts Built for You
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                Every session is tailored to your level, goals, and available
-                equipment.
-              </p>
             </div>
 
             {/* Step 2 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/progress.png"
-                  alt="Progress screen with workout stats, goal tracking, and weekly volume chart"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  unoptimized
-                />
+            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
+              <div className="flex flex-col items-center text-center">
+                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                  <Image
+                    src="/screenshots/progress.png"
+                    alt="Goals screen showing progression, top movements, and muscles worked"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 75vw, 33vw"
+                  />
+                </div>
+                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
+                  Watch Yourself Improve
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
+                  Track your goals, see which muscles you&apos;re working, and
+                  watch your top movements grow.
+                </p>
               </div>
-              <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                Watch Yourself Improve
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                Track streaks, personal records, and see your volume grow week
-                over week.
-              </p>
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-center text-center">
-              <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/explore.png"
-                  alt="Exercise library with 443 exercises, search, and filters"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  unoptimized
-                />
+            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
+              <div className="flex flex-col items-center text-center">
+                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                  <Image
+                    src="/screenshots/explore.png"
+                    alt="Exercise library with 525 exercises, search, and category filters"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 75vw, 33vw"
+                  />
+                </div>
+                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
+                  525 Exercises
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
+                  Browse by category, difficulty, or search for any movement.
+                  Every exercise has detailed instructions.
+                </p>
               </div>
-              <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                443 Exercises
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                Browse by category, difficulty, or search for any movement.
-                Every exercise has detailed instructions.
-              </p>
             </div>
+          </div>
+
+          {/* Scroll indicators — mobile only */}
+          <div className="mt-4 flex justify-center gap-2 md:hidden">
+            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
+            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
+            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
           </div>
         </div>
       </section>
@@ -231,25 +266,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Built By */}
-      <section className="bg-white px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-wider text-charcoal/40">
-            The story
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal">
-            Built by someone who needed it
-          </h2>
-          <p className="mt-6 leading-relaxed text-charcoal/60">
-            I started calisthenics with no idea how to progress beyond basic
-            push-ups. Every app I tried either gave me the same generic program
-            or wanted $30/month for a coach. So I built the training app I wished
-            existed — one that actually understands bodyweight progressions, adapts
-            to how you perform, and doesn&apos;t charge a premium for personalization.
-          </p>
-          <p className="mt-4 text-sm font-medium text-charcoal/40">
-            — Jack, founder of bit by bit
-          </p>
+      {/* Stats — Social Proof */}
+      <section className="bg-white px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-3xl">
+          <div className="flex items-center justify-center gap-12 md:gap-20">
+            <div className="text-center">
+              <p className="font-heading text-4xl font-bold text-sage">525</p>
+              <p className="mt-1 text-sm text-charcoal/50">Exercises</p>
+            </div>
+            <div className="text-center">
+              <p className="font-heading text-4xl font-bold text-sage">50+</p>
+              <p className="mt-1 text-sm text-charcoal/50">
+                Progression Chains
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="font-heading text-4xl font-bold text-sage">100%</p>
+              <p className="mt-1 text-sm text-charcoal/50">Offline</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Built By — Founder Story */}
+      <section className="bg-offwhite-warm px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-2xl">
+          <div className="rounded-2xl border-l-4 border-sage/40 bg-white px-8 py-10 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal/40">
+              The story
+            </p>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal">
+              Built by someone who needed it
+            </h2>
+            <blockquote className="mt-6 text-lg leading-relaxed text-charcoal/60">
+              I started calisthenics with no idea how to progress beyond basic
+              push-ups. Every app I tried either gave me the same generic program
+              or wanted $30/month for a coach. So I built the training app I wished
+              existed — one that actually understands bodyweight progressions, adapts
+              to how you perform, and doesn&apos;t charge a premium for
+              personalization.
+            </blockquote>
+            <p className="mt-6 font-heading text-base font-bold text-sage">
+              — Jack, founder of bit by bit
+            </p>
+          </div>
         </div>
       </section>
 

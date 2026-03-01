@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of service for the bit by bit calisthenics training app.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

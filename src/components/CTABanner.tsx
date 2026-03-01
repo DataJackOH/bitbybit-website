@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CTABanner() {
   return (
     <section className="relative overflow-hidden bg-sage px-6 py-20 md:py-28">
@@ -9,9 +11,23 @@ export default function CTABanner() {
           Your bodyweight. Your goals. Your pace.
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          We&apos;re building the training app we wished existed. Launching soon
-          on iOS.
+          Start training smarter today — download free on iOS.
         </p>
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://apps.apple.com/app/bit-by-bit/id6756225068"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/app-store-badge.svg"
+              alt="Download on the App Store"
+              width={150}
+              height={50}
+              className="h-[50px] w-auto brightness-0 invert"
+            />
+          </a>
+        </div>
       </div>
     </section>
   );

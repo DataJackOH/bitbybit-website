@@ -5,6 +5,28 @@ export const metadata: Metadata = {
   title: "Support",
   description:
     "Get help with bit by bit. Find answers to frequently asked questions.",
+  alternates: {
+    canonical: "/support",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://bitbybit.fit",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Support",
+      item: "https://bitbybit.fit/support",
+    },
+  ],
 };
 
 const faqs = [
@@ -64,6 +86,10 @@ export default function SupportPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* FAQ Section */}
       <section className="px-6 pb-20 pt-20 md:pb-28 md:pt-28">

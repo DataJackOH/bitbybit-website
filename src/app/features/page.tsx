@@ -14,6 +14,28 @@ export const metadata: Metadata = {
   title: "Features — Calisthenics Training App",
   description:
     "Explore all the features of bit by bit — personalized plans, real-time adaptation, progress tracking, achievements, and more.",
+  alternates: {
+    canonical: "/features",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://bitbybit.fit",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Features",
+      item: "https://bitbybit.fit/features",
+    },
+  ],
 };
 
 const secondaryFeatures = [
@@ -28,14 +50,14 @@ const secondaryFeatures = [
     icon: <WifiOff size={20} />,
     title: "Works Offline",
     description:
-      "Train anywhere. Data syncs when you're back online.",
+      "Train anywhere — no internet needed. Data syncs when you're back online.",
     accent: "coral" as const,
   },
   {
     icon: <BookOpen size={20} />,
     title: "Exercise Library",
     description:
-      "443 exercises with detailed instructions for every movement.",
+      "525 exercises with detailed instructions. No equipment required for most movements.",
     accent: "coral" as const,
   },
 ];
@@ -43,6 +65,11 @@ const secondaryFeatures = [
 export default function FeaturesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <section className="px-6 pb-20 pt-20 md:pb-28 md:pt-28">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-2xl text-center">
@@ -51,7 +78,7 @@ export default function FeaturesPage() {
             </h1>
             <p className="mt-5 text-lg text-charcoal/60">
               Built for beginners and intermediates who want structured,
-              adaptive training without paying for a coach.
+              adaptive training — no equipment or coach required.
             </p>
           </div>
 
@@ -80,7 +107,7 @@ export default function FeaturesPage() {
                   width={603}
                   height={1191}
                   className="w-full"
-                  unoptimized
+                  sizes="(max-width: 768px) 280px, 280px"
                 />
               </div>
             </div>
@@ -92,11 +119,11 @@ export default function FeaturesPage() {
               <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
                 <Image
                   src="/screenshots/progress.png"
-                  alt="Progress tracking with stats, goals, and weekly volume chart"
+                  alt="Goals screen showing progression, top movements, and muscles worked"
                   width={603}
                   height={1191}
                   className="w-full"
-                  unoptimized
+                  sizes="(max-width: 768px) 280px, 280px"
                 />
               </div>
             </div>
@@ -130,19 +157,20 @@ export default function FeaturesPage() {
               <p className="mt-4 leading-relaxed text-charcoal/60">
                 Every skill has a progression chain. Can&apos;t do a pull-up
                 yet? Start with dead hangs and scapular pulls, then build
-                through rows and negatives. The app knows exactly what comes
-                next and when you&apos;re ready to move up.
+                through rows and negatives. Too hard? Swap to an easier
+                alternative. Too easy? Level up. The app knows exactly what
+                comes next.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
                 <Image
-                  src="/screenshots/home.png"
-                  alt="Home screen showing goal progress and bit goals progression chain"
+                  src="/screenshots/swap.png"
+                  alt="Swap exercise screen showing easier and harder alternatives"
                   width={603}
                   height={1191}
                   className="w-full"
-                  unoptimized
+                  sizes="(max-width: 768px) 280px, 280px"
                 />
               </div>
             </div>
@@ -151,9 +179,9 @@ export default function FeaturesPage() {
           {/* Secondary Features — compact grid */}
           <div className="mt-24">
             <h2 className="text-center font-heading text-2xl font-bold text-charcoal">
-              Also Included
+              Built for Real Training
             </h2>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
               {secondaryFeatures.map((f) => {
                 const accentBg =
                   f.accent === "coral" ? "bg-coral/10" : "bg-sage/10";

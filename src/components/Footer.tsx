@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -12,6 +13,20 @@ export default function Footer() {
             <p className="mt-2 text-sm text-charcoal/60">
               Personalization without the price tag
             </p>
+            <a
+              href="https://apps.apple.com/app/bit-by-bit/id6756225068"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block"
+            >
+              <Image
+                src="/app-store-badge.svg"
+                alt="Download on the App Store"
+                width={120}
+                height={40}
+                className="h-[40px] w-auto"
+              />
+            </a>
           </div>
 
           <div className="flex gap-12">
