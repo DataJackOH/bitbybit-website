@@ -166,7 +166,7 @@ export default function FeaturesPage() {
               <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
                 <Image
                   src="/screenshots/swap.png"
-                  alt="Swap exercise screen showing easier and harder alternatives"
+                  alt="Goal progression screen showing skill ladder from beginner to advanced"
                   width={603}
                   height={1191}
                   className="w-full"
