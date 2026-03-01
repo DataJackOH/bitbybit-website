@@ -5,11 +5,11 @@ import {
   Dumbbell,
   TrendingUp,
   Timer,
-  WifiOff,
-  BookOpen,
   PlayCircle,
   Trophy,
   SlidersHorizontal,
+  ArrowLeftRight,
+  ClipboardList,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
@@ -50,39 +50,39 @@ const secondaryFeatures = [
     accent: "sage" as const,
   },
   {
-    icon: <WifiOff size={20} />,
-    title: "Works Offline",
-    description:
-      "Train anywhere — no internet needed. Data syncs when you're back online.",
-    accent: "coral" as const,
-  },
-  {
-    icon: <BookOpen size={20} />,
-    title: "Exercise Library",
-    description:
-      "525 exercises with detailed instructions. No equipment required for most movements.",
-    accent: "coral" as const,
-  },
-  {
     icon: <PlayCircle size={20} />,
     title: "Exercise Videos",
     description:
       "Video demo for every exercise so you can check form.",
-    accent: "sage" as const,
+    accent: "coral" as const,
   },
   {
     icon: <SlidersHorizontal size={20} />,
     title: "Training Setup",
     description:
       "Equipment, schedule, and injuries — the app builds around your real life.",
-    accent: "coral" as const,
+    accent: "sage" as const,
   },
   {
     icon: <Trophy size={20} />,
     title: "Personal Records",
     description:
       "Tracks your best set for every exercise.",
+    accent: "coral" as const,
+  },
+  {
+    icon: <ClipboardList size={20} />,
+    title: "Workout History",
+    description:
+      "See every past workout — exercises, sets, reps, and when you trained.",
     accent: "sage" as const,
+  },
+  {
+    icon: <Target size={20} />,
+    title: "Goal Tracking",
+    description:
+      "Set a skill goal and watch your progress toward it.",
+    accent: "coral" as const,
   },
 ];
 
@@ -200,22 +200,53 @@ export default function FeaturesPage() {
             </div>
           </div>
 
-          {/* Hero Feature 4 — Exercise Demos */}
+          {/* Hero Feature 4 — Swap Exercises */}
           <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
             <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/exercise-detail.png"
-                  alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+              <div className="mx-auto flex max-w-[560px] gap-4">
+                <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                  <Image
+                    src="/screenshots/workout-preview-swap.png"
+                    alt="Workout preview with Swap button visible on an exercise"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 140px, 260px"
+                  />
+                </div>
+                <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                  <Image
+                    src="/screenshots/swap-exercise.png"
+                    alt="Swap Exercise screen showing easier and harder alternatives with difficulty labels"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 140px, 260px"
+                  />
+                </div>
               </div>
             </div>
             <div className="md:w-1/2">
               <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
+                <ArrowLeftRight size={14} />
+                Flexibility
+              </div>
+              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                Swap any exercise, instantly
+              </h2>
+              <p className="mt-4 leading-relaxed text-charcoal/60">
+                Too hard? Too easy? Don&apos;t have the equipment? Swipe any
+                exercise to see easier and harder alternatives — each with
+                difficulty labels and rep counts. Pick the one that fits and
+                keep going.
+              </p>
+            </div>
+          </div>
+
+          {/* Hero Feature 5 — Exercise Demos */}
+          <div className="mt-24 flex flex-col items-center gap-10 md:flex-row">
+            <div className="md:w-1/2">
+              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
                 <PlayCircle size={14} />
                 Exercise Library
               </div>
@@ -228,12 +259,36 @@ export default function FeaturesPage() {
                 tap any movement and see exactly how it&apos;s done.
               </p>
             </div>
+            <div className="md:w-1/2">
+              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                <Image
+                  src="/screenshots/exercise-detail.png"
+                  alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
+                  width={603}
+                  height={1191}
+                  className="w-full"
+                  sizes="(max-width: 768px) 280px, 280px"
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Hero Feature 5 — Workout Feedback */}
-          <div className="mt-24 flex flex-col items-center gap-10 md:flex-row">
+          {/* Hero Feature 6 — Workout Feedback */}
+          <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
             <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
+              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                <Image
+                  src="/screenshots/workout-summary.png"
+                  alt="Workout summary screen with difficulty rating, streak tracking, and session stats"
+                  width={603}
+                  height={1191}
+                  className="w-full"
+                  sizes="(max-width: 768px) 280px, 280px"
+                />
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
                 <TrendingUp size={14} />
                 Smart Feedback
               </div>
@@ -246,18 +301,6 @@ export default function FeaturesPage() {
                 session, tracks your streak, and keeps you moving in the right
                 direction.
               </p>
-            </div>
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/workout-summary.png"
-                  alt="Workout summary screen with difficulty rating, streak tracking, and session stats"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
-              </div>
             </div>
           </div>
 

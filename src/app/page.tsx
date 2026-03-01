@@ -51,10 +51,10 @@ export default function HomePage() {
               </h1>
               <p className="mt-5 text-lg text-charcoal/60">
                 Free personalized calisthenics plans that adapt to your level.
-                Pull-ups, push-ups, handstands — no trainer needed.
+                Pull-ups, push-ups, planches, and more — no trainer needed.
               </p>
               <p className="mt-3 text-sm font-medium text-charcoal/40">
-                525 exercises · Infinite progressions · Works offline
+                525 exercises · Infinite progressions · Fully personalized
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
                 <a
@@ -77,8 +77,8 @@ export default function HomePage() {
             <div className="relative shrink-0">
               <div className="overflow-hidden rounded-[2.5rem] border-2 border-charcoal/10 bg-charcoal shadow-xl">
                 <Image
-                  src="/screenshots/workout-preview.png"
-                  alt="Workout preview screen showing Beginner difficulty, 25 min duration, exercise list, and Begin Workout button"
+                  src="/screenshots/active-workout-hero.png"
+                  alt="Active workout screen showing Band Push Up with exercise animation, logged sets, and Finish Workout button"
                   width={603}
                   height={1191}
                   className="w-[240px] rounded-[2.3rem] md:w-[280px]"
@@ -283,7 +283,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <p className="font-heading text-4xl font-bold text-sage">100%</p>
-              <p className="mt-1 text-sm text-charcoal/50">Offline</p>
+              <p className="mt-1 text-sm text-charcoal/50">Personalized</p>
             </div>
           </div>
         </div>
