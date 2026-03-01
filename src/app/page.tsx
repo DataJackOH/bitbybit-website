@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Target, Footprints, Smartphone } from "lucide-react";
+import { ChevronRight, Target, Footprints, Trophy } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
@@ -77,8 +77,8 @@ export default function HomePage() {
             <div className="relative shrink-0">
               <div className="overflow-hidden rounded-[2.5rem] border-2 border-charcoal/10 bg-charcoal shadow-xl">
                 <Image
-                  src="/screenshots/workout.png"
-                  alt="bit by bit workout screen showing exercises, sets, and reps"
+                  src="/screenshots/workout-preview.png"
+                  alt="Workout preview screen showing Beginner difficulty, 25 min duration, exercise list, and Begin Workout button"
                   width={603}
                   height={1191}
                   className="w-[240px] rounded-[2.3rem] md:w-[280px]"
@@ -235,16 +235,17 @@ export default function HomePage() {
             <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10 text-sage">
-                  <Smartphone size={20} />
+                  <Trophy size={20} />
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-bold text-charcoal">
-                    Built only for calisthenics
+                    Set a goal, follow the ladder
                   </h3>
                   <p className="mt-2 leading-relaxed text-charcoal/60">
-                    Not a generic gym app with bodyweight bolted on. Every
-                    feature — from progression chains to workout structure — is
-                    designed around how calisthenics actually works.
+                    Pick a skill — pull-ups, handstands, pistol squats — and get
+                    a clear progression ladder from beginner to advanced. The app
+                    tracks where you are and moves you forward one step at a
+                    time.
                   </p>
                 </div>
               </div>

@@ -7,6 +7,9 @@ import {
   Timer,
   WifiOff,
   BookOpen,
+  PlayCircle,
+  Trophy,
+  SlidersHorizontal,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 
@@ -59,6 +62,27 @@ const secondaryFeatures = [
     description:
       "525 exercises with detailed instructions. No equipment required for most movements.",
     accent: "coral" as const,
+  },
+  {
+    icon: <PlayCircle size={20} />,
+    title: "Exercise Videos",
+    description:
+      "Video demo for every exercise so you can check form.",
+    accent: "sage" as const,
+  },
+  {
+    icon: <SlidersHorizontal size={20} />,
+    title: "Training Setup",
+    description:
+      "Equipment, schedule, and injuries — the app builds around your real life.",
+    accent: "coral" as const,
+  },
+  {
+    icon: <Trophy size={20} />,
+    title: "Personal Records",
+    description:
+      "Tracks your best set for every exercise.",
+    accent: "sage" as const,
   },
 ];
 
@@ -167,6 +191,67 @@ export default function FeaturesPage() {
                 <Image
                   src="/screenshots/swap.png"
                   alt="Goal progression screen showing skill ladder from beginner to advanced"
+                  width={603}
+                  height={1191}
+                  className="w-full"
+                  sizes="(max-width: 768px) 280px, 280px"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Hero Feature 4 — Exercise Demos */}
+          <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
+            <div className="md:w-1/2">
+              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                <Image
+                  src="/screenshots/exercise-detail.png"
+                  alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
+                  width={603}
+                  height={1191}
+                  className="w-full"
+                  sizes="(max-width: 768px) 280px, 280px"
+                />
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
+                <PlayCircle size={14} />
+                Exercise Library
+              </div>
+              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                Every exercise, explained
+              </h2>
+              <p className="mt-4 leading-relaxed text-charcoal/60">
+                Video demos, step-by-step instructions, and muscles worked for
+                all 525 exercises. Never wonder if your form is right — just
+                tap any movement and see exactly how it&apos;s done.
+              </p>
+            </div>
+          </div>
+
+          {/* Hero Feature 5 — Workout Feedback */}
+          <div className="mt-24 flex flex-col items-center gap-10 md:flex-row">
+            <div className="md:w-1/2">
+              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
+                <TrendingUp size={14} />
+                Smart Feedback
+              </div>
+              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                Log it, rate it, improve
+              </h2>
+              <p className="mt-4 leading-relaxed text-charcoal/60">
+                After every workout, rate the difficulty — Too Easy, Just Right,
+                or Tough. The app uses your feedback to calibrate the next
+                session, tracks your streak, and keeps you moving in the right
+                direction.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
+                <Image
+                  src="/screenshots/workout-summary.png"
+                  alt="Workout summary screen with difficulty rating, streak tracking, and session stats"
                   width={603}
                   height={1191}
                   className="w-full"
