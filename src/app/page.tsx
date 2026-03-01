@@ -225,7 +225,8 @@ export default function HomePage() {
                     Can&apos;t do a pull-up yet? The app starts you with dead
                     hangs and scapular pulls, then builds through rows and
                     negatives until you get there. Every skill has a progression
-                    chain — the app knows exactly what comes next.
+                    chain — the app knows exactly what comes next, but
+                    you&apos;re always free to swap in something you enjoy more.
                   </p>
                 </div>
               </div>
@@ -239,13 +240,14 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-heading text-xl font-bold text-charcoal">
-                    Set a goal, follow the ladder
+                    Adapts to your equipment
                   </h3>
                   <p className="mt-2 leading-relaxed text-charcoal/60">
-                    Pick a skill — pull-ups, handstands, pistol squats — and get
-                    a clear progression ladder from beginner to advanced. The app
-                    tracks where you are and moves you forward one step at a
-                    time.
+                    No bands? No problem — the app swaps in alternatives you
+                    can do. Only have a pull-up bar? It builds around that. Tell
+                    it what you&apos;ve got and every workout fits your setup.
+                    No gear required to start, but a bar goes a long way if
+                    pull-ups are the goal.
                   </p>
                 </div>
               </div>
