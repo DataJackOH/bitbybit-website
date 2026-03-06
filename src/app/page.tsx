@@ -63,14 +63,9 @@ export default function HomePage() {
                   href="https://apps.apple.com/app/bit-by-bit/id6756225068"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-white transition-opacity duration-200 hover:opacity-90"
                 >
-                  <Image
-                    src="/app-store-badge.svg"
-                    alt="Download on the App Store"
-                    width={180}
-                    height={60}
-                    className="h-[60px] w-auto"
-                  />
+                  Download on the App Store
                 </a>
                 <a
                   href="#see-it-in-action"
