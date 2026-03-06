@@ -16,13 +16,13 @@ function fetchPrice(): Promise<string> {
       .then((data: { country: string; pricing: PricingTier }) =>
         formatMonthly(data.pricing)
       )
-      .catch(() => "$9.99/mo");
+      .catch(() => "$5.99/mo");
   }
   return cachedPromise;
 }
 
 export default function RegionalPrice() {
-  const [price, setPrice] = useState("$9.99/mo");
+  const [price, setPrice] = useState("$5.99/mo");
 
   useEffect(() => {
     fetchPrice().then(setPrice);
