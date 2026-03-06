@@ -12,6 +12,7 @@ import {
   ClipboardList,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Features — Calisthenics Training App",
@@ -100,212 +101,224 @@ export default function FeaturesPage() {
             <h1 className="font-heading text-4xl font-bold text-charcoal md:text-5xl">
               Everything you need to master calisthenics
             </h1>
-            <p className="mt-5 text-lg text-charcoal/60">
+            <p className="mt-5 text-lg text-charcoal/70">
               Built for beginners and intermediates who want structured,
               adaptive training — no equipment or coach required.
             </p>
           </div>
 
           {/* Hero Feature 1 — Personalized Plans */}
-          <div className="mt-20 flex flex-col items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
-                <Target size={14} />
-                Core Feature
+          <ScrollReveal className="mt-20">
+            <div className="flex flex-col items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
+                  <Target size={14} />
+                  Core Feature
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  Personalized Plans
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  Every workout is built around your current fitness level. No
+                  cookie-cutter programs — the app meets you where you are and
+                  progresses with you. Choose from pull-ups, push-ups, squats,
+                  dips, or handstands and get a plan structured around your goals.
+                </p>
               </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                Personalized Plans
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                Every workout is built around your current fitness level. No
-                cookie-cutter programs — the app meets you where you are and
-                progresses with you. Choose from pull-ups, push-ups, squats,
-                dips, or handstands and get a plan structured around your goals.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/workout.png"
-                  alt="Personalized workout plan showing exercises tailored to your level"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+              <div className="md:w-1/2">
+                <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                  <Image
+                    src="/screenshots/workout.png"
+                    alt="Personalized workout plan showing exercises tailored to your level"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 280px, 280px"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Hero Feature 2 — Real-Time Adaptation */}
-          <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/progress.png"
-                  alt="Goals screen showing progression, top movements, and muscles worked"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+          <ScrollReveal className="mt-24">
+            <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                  <Image
+                    src="/screenshots/progress.png"
+                    alt="Goals screen showing progression, top movements, and muscles worked"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 280px, 280px"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
+                  <TrendingUp size={14} />
+                  Smart Training
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  Adapts as You Improve
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  Performed well? The next session increases the challenge. Had a
+                  tough day? It adjusts accordingly. Your plan evolves with every
+                  workout — tracking streaks, personal records, and weekly volume
+                  so you can see real progress.
+                </p>
               </div>
             </div>
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
-                <TrendingUp size={14} />
-                Smart Training
-              </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                Adapts as You Improve
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                Performed well? The next session increases the challenge. Had a
-                tough day? It adjusts accordingly. Your plan evolves with every
-                workout — tracking streaks, personal records, and weekly volume
-                so you can see real progress.
-              </p>
-            </div>
-          </div>
+          </ScrollReveal>
 
           {/* Hero Feature 3 — Goal-Focused Progression */}
-          <div className="mt-24 flex flex-col items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
-                <Dumbbell size={14} />
-                Progression System
+          <ScrollReveal className="mt-24">
+            <div className="flex flex-col items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
+                  <Dumbbell size={14} />
+                  Progression System
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  From Zero to Pull-Up
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  Every skill has a progression chain. Can&apos;t do a pull-up
+                  yet? Start with dead hangs and scapular pulls, then build
+                  through rows and negatives. Too hard? Swap to an easier
+                  alternative. Too easy? Level up. The app knows exactly what
+                  comes next.
+                </p>
               </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                From Zero to Pull-Up
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                Every skill has a progression chain. Can&apos;t do a pull-up
-                yet? Start with dead hangs and scapular pulls, then build
-                through rows and negatives. Too hard? Swap to an easier
-                alternative. Too easy? Level up. The app knows exactly what
-                comes next.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/swap.png"
-                  alt="Goal progression screen showing skill ladder from beginner to advanced"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+              <div className="md:w-1/2">
+                <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                  <Image
+                    src="/screenshots/swap.png"
+                    alt="Goal progression screen showing skill ladder from beginner to advanced"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 280px, 280px"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Hero Feature 4 — Swap Exercises */}
-          <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="mx-auto flex max-w-[560px] gap-4">
-                <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                  <Image
-                    src="/screenshots/workout-preview-swap.png"
-                    alt="Workout preview with Swap button visible on an exercise"
-                    width={603}
-                    height={1191}
-                    className="w-full"
-                    sizes="(max-width: 768px) 140px, 260px"
-                  />
-                </div>
-                <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                  <Image
-                    src="/screenshots/swap-exercise.png"
-                    alt="Swap Exercise screen showing easier and harder alternatives with difficulty labels"
-                    width={603}
-                    height={1191}
-                    className="w-full"
-                    sizes="(max-width: 768px) 140px, 260px"
-                  />
+          <ScrollReveal className="mt-24">
+            <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="mx-auto flex max-w-[560px] gap-4">
+                  <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                    <Image
+                      src="/screenshots/workout-preview-swap.png"
+                      alt="Workout preview with Swap button visible on an exercise"
+                      width={603}
+                      height={1191}
+                      className="w-full"
+                      sizes="(max-width: 768px) 140px, 260px"
+                    />
+                  </div>
+                  <div className="flex-1 overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                    <Image
+                      src="/screenshots/swap-exercise.png"
+                      alt="Swap Exercise screen showing easier and harder alternatives with difficulty labels"
+                      width={603}
+                      height={1191}
+                      className="w-full"
+                      sizes="(max-width: 768px) 140px, 260px"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
-                <ArrowLeftRight size={14} />
-                Flexibility
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
+                  <ArrowLeftRight size={14} />
+                  Flexibility
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  Swap any exercise, instantly
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  Too hard? Too easy? Don&apos;t have the equipment? Swipe any
+                  exercise to see easier and harder alternatives — each with
+                  difficulty labels and rep counts. Pick the one that fits and
+                  keep going.
+                </p>
               </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                Swap any exercise, instantly
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                Too hard? Too easy? Don&apos;t have the equipment? Swipe any
-                exercise to see easier and harder alternatives — each with
-                difficulty labels and rep counts. Pick the one that fits and
-                keep going.
-              </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Hero Feature 5 — Exercise Demos */}
-          <div className="mt-24 flex flex-col items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
-                <PlayCircle size={14} />
-                Exercise Library
+          <ScrollReveal className="mt-24">
+            <div className="flex flex-col items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
+                  <PlayCircle size={14} />
+                  Exercise Library
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  Every exercise, explained
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  Video demos, step-by-step instructions, and muscles worked for
+                  all 525 exercises. Never wonder if your form is right — just
+                  tap any movement and see exactly how it&apos;s done.
+                </p>
               </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                Every exercise, explained
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                Video demos, step-by-step instructions, and muscles worked for
-                all 525 exercises. Never wonder if your form is right — just
-                tap any movement and see exactly how it&apos;s done.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/exercise-detail.png"
-                  alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+              <div className="md:w-1/2">
+                <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                  <Image
+                    src="/screenshots/exercise-detail.png"
+                    alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 280px, 280px"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Hero Feature 6 — Workout Feedback */}
-          <div className="mt-24 flex flex-col-reverse items-center gap-10 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                <Image
-                  src="/screenshots/workout-summary.png"
-                  alt="Workout summary screen with difficulty rating, streak tracking, and session stats"
-                  width={603}
-                  height={1191}
-                  className="w-full"
-                  sizes="(max-width: 768px) 280px, 280px"
-                />
+          <ScrollReveal className="mt-24">
+            <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
+              <div className="md:w-1/2">
+                <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                  <Image
+                    src="/screenshots/workout-summary.png"
+                    alt="Workout summary screen with difficulty rating, streak tracking, and session stats"
+                    width={603}
+                    height={1191}
+                    className="w-full"
+                    sizes="(max-width: 768px) 280px, 280px"
+                  />
+                </div>
+              </div>
+              <div className="md:w-1/2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
+                  <TrendingUp size={14} />
+                  Smart Feedback
+                </div>
+                <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
+                  Log it, rate it, improve
+                </h2>
+                <p className="mt-4 leading-relaxed text-charcoal/70">
+                  After every workout, rate the difficulty — Too Easy, Just Right,
+                  or Tough. The app uses your feedback to calibrate the next
+                  session, tracks your streak, and keeps you moving in the right
+                  direction.
+                </p>
               </div>
             </div>
-            <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 rounded-full bg-coral/10 px-3 py-1 text-xs font-semibold text-coral">
-                <TrendingUp size={14} />
-                Smart Feedback
-              </div>
-              <h2 className="mt-4 font-heading text-2xl font-bold text-charcoal md:text-3xl">
-                Log it, rate it, improve
-              </h2>
-              <p className="mt-4 leading-relaxed text-charcoal/60">
-                After every workout, rate the difficulty — Too Easy, Just Right,
-                or Tough. The app uses your feedback to calibrate the next
-                session, tracks your streak, and keeps you moving in the right
-                direction.
-              </p>
-            </div>
-          </div>
+          </ScrollReveal>
 
           {/* Secondary Features — compact grid */}
-          <div className="mt-24">
+          <ScrollReveal className="mt-24">
             <h2 className="text-center font-heading text-2xl font-bold text-charcoal">
               Built for Real Training
             </h2>
@@ -318,7 +331,7 @@ export default function FeaturesPage() {
                 return (
                   <div
                     key={f.title}
-                    className="rounded-xl border border-charcoal/[0.06] bg-white p-5"
+                    className="rounded-xl border border-charcoal/[0.06] bg-white p-5 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
                   >
                     <div
                       className={`mb-3 flex h-9 w-9 items-center justify-center rounded-lg ${accentBg} ${accentText}`}
@@ -328,14 +341,14 @@ export default function FeaturesPage() {
                     <h3 className="font-heading text-base font-bold text-charcoal">
                       {f.title}
                     </h3>
-                    <p className="mt-1 text-xs leading-relaxed text-charcoal/60">
+                    <p className="mt-1 text-xs leading-relaxed text-charcoal/70">
                       {f.description}
                     </p>
                   </div>
                 );
               })}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 

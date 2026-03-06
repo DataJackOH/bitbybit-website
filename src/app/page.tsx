@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Target, Footprints, Trophy } from "lucide-react";
+import { ChevronRight, Target, Footprints, Trophy, Apple } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
+import ScrollReveal from "@/components/ScrollReveal";
+import AppShowcase from "@/components/AppShowcase";
 
 export const metadata: Metadata = {
   alternates: {
@@ -23,7 +25,7 @@ const jsonLd = {
   image: "https://bitbybit.fit/og-image.png",
   offers: {
     "@type": "Offer",
-    availability: "https://schema.org/PreOrder",
+    availability: "https://schema.org/InStock",
     price: "0",
     priceCurrency: "AUD",
   },
@@ -49,32 +51,38 @@ export default function HomePage() {
                 Master Calisthenics,{" "}
                 <span className="text-sage">Your Way</span>
               </h1>
-              <p className="mt-5 text-lg text-charcoal/60">
-                Free personalized calisthenics plans that adapt to your level.
+              <p className="mt-5 text-lg leading-relaxed text-charcoal/70">
+                Personalized calisthenics plans that adapt to your level.
                 Pull-ups, push-ups, planches, and more — no trainer needed.
               </p>
-              <p className="mt-3 text-sm font-medium text-charcoal/40">
-                525 exercises · Infinite progressions · Fully personalized
+              <p className="mt-3 text-sm font-medium text-charcoal/60">
+                525 exercises · Infinite progressions · Free trial included
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
                 <a
                   href="https://apps.apple.com/app/bit-by-bit/id6756225068"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-coral-dark"
                 >
-                  <Image
-                    src="/app-store-badge.svg"
-                    alt="Download on the App Store"
-                    width={150}
-                    height={50}
-                    className="h-[50px] w-auto"
-                  />
+                  <Apple size={18} />
+                  Download Free on iOS
+                </a>
+                <a
+                  href="#see-it-in-action"
+                  className="inline-flex items-center justify-center gap-1 rounded-full border border-charcoal/15 px-5 py-3 text-sm font-medium text-charcoal/70 transition-colors hover:border-charcoal/30 hover:text-charcoal"
+                >
+                  See how it works
+                  <ChevronRight size={14} />
                 </a>
               </div>
+              <p className="mt-4 text-xs text-charcoal/60 sm:text-center md:text-left">
+                Available on iPhone · No credit card required
+              </p>
             </div>
 
             {/* Real app screenshot in device frame */}
-            <div className="relative shrink-0">
+            <div className="relative shrink-0 animate-float">
               <div className="overflow-hidden rounded-[2.5rem] border-2 border-charcoal/10 bg-charcoal shadow-xl">
                 <Image
                   src="/screenshots/active-workout-hero.png"
@@ -92,166 +100,99 @@ export default function HomePage() {
       </section>
 
       {/* Show Don't Tell — App in Action */}
-      <section className="bg-white px-6 py-20 md:py-28">
+      <section id="see-it-in-action" className="bg-white px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
-            See It in Action
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-charcoal/60">
-            Set your goals, follow workouts that adapt to you, and track real
-            improvement over time.
-          </p>
+          <ScrollReveal>
+            <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
+              See It in Action
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-charcoal/70">
+              Set your goals, follow workouts that adapt to you, and track real
+              improvement over time.
+            </p>
+          </ScrollReveal>
 
-          {/* Mobile: horizontal scroll, Desktop: 3-col grid */}
-          <div className="scrollbar-hide -mx-6 mt-16 flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 pb-4 md:pb-0">
-            {/* Step 1 */}
-            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
-              <div className="flex flex-col items-center text-center">
-                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                  <Image
-                    src="/screenshots/home.png"
-                    alt="Home screen showing today's workout, upcoming sessions, and your goals"
-                    width={603}
-                    height={1191}
-                    className="w-full"
-                    sizes="(max-width: 768px) 75vw, 33vw"
-                  />
-                </div>
-                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                  Your Daily Plan
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                  See today&apos;s workout, what&apos;s coming next, and your
-                  current goals — all in one place.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
-              <div className="flex flex-col items-center text-center">
-                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                  <Image
-                    src="/screenshots/progress.png"
-                    alt="Goals screen showing progression, top movements, and muscles worked"
-                    width={603}
-                    height={1191}
-                    className="w-full"
-                    sizes="(max-width: 768px) 75vw, 33vw"
-                  />
-                </div>
-                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                  Watch Yourself Improve
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                  Track your goals, see which muscles you&apos;re working, and
-                  watch your top movements grow.
-                </p>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="min-w-[75vw] flex-shrink-0 snap-center md:min-w-0 md:flex-shrink">
-              <div className="flex flex-col items-center text-center">
-                <div className="overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg">
-                  <Image
-                    src="/screenshots/explore.png"
-                    alt="Exercise library with 525 exercises, search, and category filters"
-                    width={603}
-                    height={1191}
-                    className="w-full"
-                    sizes="(max-width: 768px) 75vw, 33vw"
-                  />
-                </div>
-                <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
-                  525 Exercises
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal/60">
-                  Browse by category, difficulty, or search for any movement.
-                  Every exercise has detailed instructions.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Scroll indicators — mobile only */}
-          <div className="mt-4 flex justify-center gap-2 md:hidden">
-            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
-            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
-            <span className="h-1.5 w-1.5 rounded-full bg-charcoal/20" />
-          </div>
+          <AppShowcase />
         </div>
       </section>
 
       {/* What Makes It Different */}
       <section className="bg-offwhite-warm px-6 py-20 md:py-28">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
-            Why bit by bit?
-          </h2>
+          <ScrollReveal>
+            <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
+              Why bit by bit?
+            </h2>
+          </ScrollReveal>
           <div className="mt-12 space-y-10">
             {/* Differentiator 1 */}
-            <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10 text-sage">
-                  <Target size={20} />
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-bold text-charcoal">
-                    It actually adapts to you
-                  </h3>
-                  <p className="mt-2 leading-relaxed text-charcoal/60">
-                    Most apps give you the same program everyone else gets. bit
-                    by bit builds your plan around your goals, your fitness
-                    level, and your equipment. Performed well? The next session
-                    gets harder. Had a tough day? It dials back. Your plan
-                    evolves with every workout.
-                  </p>
+            <ScrollReveal>
+              <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8 transition-shadow duration-300 hover:shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10 text-sage">
+                    <Target size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-charcoal">
+                      It actually adapts to you
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-charcoal/70">
+                      Most apps give you the same program everyone else gets. bit
+                      by bit builds your plan around your goals, your fitness
+                      level, and your equipment. Performed well? The next session
+                      gets harder. Had a tough day? It dials back. Your plan
+                      evolves with every workout.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Differentiator 2 */}
-            <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-coral/10 text-coral">
-                  <Footprints size={20} />
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-bold text-charcoal">
-                    Built for calisthenics progression
-                  </h3>
-                  <p className="mt-2 leading-relaxed text-charcoal/60">
-                    Can&apos;t do a pull-up yet? The app starts you with dead
-                    hangs and scapular pulls, then builds through rows and
-                    negatives until you get there. Every skill has a progression
-                    chain — the app knows exactly what comes next, but
-                    you&apos;re always free to swap in something you enjoy more.
-                  </p>
+            <ScrollReveal delay={100}>
+              <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8 transition-shadow duration-300 hover:shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-coral/10 text-coral">
+                    <Footprints size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-charcoal">
+                      Built for calisthenics progression
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-charcoal/70">
+                      Can&apos;t do a pull-up yet? The app starts you with dead
+                      hangs and scapular pulls, then builds through rows and
+                      negatives until you get there. Every skill has a progression
+                      chain — the app knows exactly what comes next, but
+                      you&apos;re always free to swap in something you enjoy more.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Differentiator 3 */}
-            <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8">
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10 text-sage">
-                  <Trophy size={20} />
-                </div>
-                <div>
-                  <h3 className="font-heading text-xl font-bold text-charcoal">
-                    Adapts to your equipment
-                  </h3>
-                  <p className="mt-2 leading-relaxed text-charcoal/60">
-                    No bands? No problem — the app swaps in alternatives you
-                    can do. Only have a pull-up bar? It builds around that. Tell
-                    it what you&apos;ve got and every workout fits your setup.
-                    No gear required to start, but a bar goes a long way if
-                    pull-ups are the goal.
-                  </p>
+            <ScrollReveal delay={200}>
+              <div className="rounded-2xl border border-charcoal/[0.06] bg-white p-8 transition-shadow duration-300 hover:shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage/10 text-sage">
+                    <Trophy size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-charcoal">
+                      Adapts to your equipment
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-charcoal/70">
+                      No bands? No problem — the app swaps in alternatives you
+                      can do. Only have a pull-up bar? It builds around that. Tell
+                      it what you&apos;ve got and every workout fits your setup.
+                      No gear required to start, but a bar goes a long way if
+                      pull-ups are the goal.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           <div className="mt-10 text-center">
@@ -271,49 +212,53 @@ export default function HomePage() {
 
       {/* Stats — Social Proof */}
       <section className="bg-white px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl">
-          <div className="flex items-center justify-center gap-12 md:gap-20">
-            <div className="text-center">
-              <p className="font-heading text-4xl font-bold text-sage">525</p>
-              <p className="mt-1 text-sm text-charcoal/50">Exercises</p>
-            </div>
-            <div className="text-center">
-              <p className="font-heading text-4xl font-bold text-sage">50+</p>
-              <p className="mt-1 text-sm text-charcoal/50">
-                Progression Chains
-              </p>
-            </div>
-            <div className="text-center">
-              <p className="font-heading text-4xl font-bold text-sage">100%</p>
-              <p className="mt-1 text-sm text-charcoal/50">Personalized</p>
+        <ScrollReveal>
+          <div className="mx-auto max-w-3xl">
+            <div className="flex items-center justify-center gap-12 md:gap-20">
+              <div className="text-center">
+                <p className="font-heading text-4xl font-bold text-sage">525</p>
+                <p className="mt-1 text-sm text-charcoal/60">Exercises</p>
+              </div>
+              <div className="text-center">
+                <p className="font-heading text-4xl font-bold text-sage">50+</p>
+                <p className="mt-1 text-sm text-charcoal/60">
+                  Progression Chains
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="font-heading text-4xl font-bold text-sage">5</p>
+                <p className="mt-1 text-sm text-charcoal/60">Skill Goals</p>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Built By — Founder Story */}
       <section className="bg-offwhite-warm px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-2xl">
-          <div className="rounded-2xl border-l-4 border-sage/40 bg-white px-8 py-10 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal/40">
-              The story
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal">
-              Built by someone who needed it
-            </h2>
-            <blockquote className="mt-6 text-lg leading-relaxed text-charcoal/60">
-              I started calisthenics with no idea how to progress beyond basic
-              push-ups. Every app I tried either gave me the same generic program
-              or wanted $30/month for a coach. So I built the training app I wished
-              existed — one that actually understands bodyweight progressions, adapts
-              to how you perform, and doesn&apos;t charge a premium for
-              personalization.
-            </blockquote>
-            <p className="mt-6 font-heading text-base font-bold text-sage">
-              — Tobey, founder of bit by bit
-            </p>
+        <ScrollReveal>
+          <div className="mx-auto max-w-2xl">
+            <div className="rounded-2xl border-l-4 border-sage/40 bg-white px-8 py-10 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wider text-charcoal/40">
+                The story
+              </p>
+              <h2 className="mt-3 font-heading text-3xl font-bold text-charcoal">
+                Built by someone who needed it
+              </h2>
+              <blockquote className="mt-6 text-lg leading-relaxed text-charcoal/70">
+                I started calisthenics with no idea how to progress beyond basic
+                push-ups. Every app I tried either gave me the same generic program
+                or wanted $30/month for a coach. So I built the training app I wished
+                existed — one that actually understands bodyweight progressions, adapts
+                to how you perform, and doesn&apos;t charge a premium for
+                personalization.
+              </blockquote>
+              <p className="mt-6 font-heading text-base font-bold text-sage">
+                — Tobey, founder of bit by bit
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* CTA */}

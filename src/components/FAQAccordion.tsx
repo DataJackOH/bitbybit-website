@@ -7,16 +7,21 @@ interface FAQAccordionProps {
   answer: string;
 }
 
+let faqCounter = 0;
+
 export default function FAQAccordion({ question, answer }: FAQAccordionProps) {
   const [open, setOpen] = useState(false);
+  const [id] = useState(() => `faq-${++faqCounter}`);
 
   return (
     <div className="border-b border-charcoal/10">
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls={id}
         className="flex w-full items-center justify-between py-5 text-left"
       >
-        <span className="pr-4 font-heading text-base font-bold text-charcoal">
+        <span className="pr-4 font-heading text-lg font-bold text-charcoal">
           {question}
         </span>
         <svg
@@ -34,9 +39,11 @@ export default function FAQAccordion({ question, answer }: FAQAccordionProps) {
         </svg>
       </button>
       <div
+        id={id}
+        role="region"
         className={`overflow-hidden transition-all duration-200 ${open ? "max-h-96 pb-5" : "max-h-0"}`}
       >
-        <p className="text-sm leading-relaxed text-charcoal/60">{answer}</p>
+        <p className="text-sm leading-relaxed text-charcoal/70">{answer}</p>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Footer() {
             <p className="font-heading text-xl font-bold text-charcoal">
               bit by bit
             </p>
-            <p className="mt-2 text-sm text-charcoal/60">
+            <p className="mt-2 text-sm text-charcoal/70">
               Personalization without the price tag
             </p>
             <a

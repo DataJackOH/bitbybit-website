@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import FAQAccordion from "@/components/FAQAccordion";
+import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Support",
@@ -38,7 +39,7 @@ const faqs = [
   {
     question: "How much does it cost?",
     answer:
-      "bit by bit requires a subscription to use. We offer a free trial so you can try the full experience before committing. Subscriptions are billed through the Apple App Store — you can view pricing and trial details on the subscription page within the app.",
+      "bit by bit offers a free trial so you can try the full experience before committing. After the trial, a subscription is required to continue. Subscriptions are billed through the Apple App Store — you can view pricing and trial details on the subscription page within the app.",
   },
   {
     question: "What equipment do I need?",
@@ -98,7 +99,7 @@ export default function SupportPage() {
             <h1 className="font-heading text-4xl font-bold text-charcoal md:text-5xl">
               Support
             </h1>
-            <p className="mt-5 text-lg text-charcoal/60">
+            <p className="mt-5 text-lg text-charcoal/70">
               Find answers to common questions below.
             </p>
           </div>
@@ -119,6 +120,8 @@ export default function SupportPage() {
           </div>
         </div>
       </section>
+
+      <CTABanner />
     </>
   );
 }
