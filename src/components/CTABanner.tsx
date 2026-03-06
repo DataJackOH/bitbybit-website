@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function CTABanner() {
   return (
     <section className="relative overflow-hidden bg-sage px-6 py-20 md:py-28">
@@ -13,21 +11,6 @@ export default function CTABanner() {
         <p className="mt-4 text-lg text-white/80">
           Start training smarter today — download free on iOS.
         </p>
-        <div className="mt-8 flex justify-center">
-          <a
-            href="https://apps.apple.com/app/bit-by-bit/id6756225068"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/app-store-badge.svg"
-              alt="Download on the App Store"
-              width={180}
-              height={60}
-              className="h-[60px] w-auto"
-            />
-          </a>
-        </div>
       </div>
     </section>
   );

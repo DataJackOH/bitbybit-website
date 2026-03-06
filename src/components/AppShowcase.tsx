@@ -95,10 +95,10 @@ export default function AppShowcase() {
                   sizes="(max-width: 768px) 65vw, 33vw"
                 />
               </div>
-              <h3 className="mt-6 font-heading text-xl font-bold text-charcoal">
+              <h3 className="mt-4 font-heading text-lg font-bold text-charcoal md:mt-6 md:text-xl">
                 {slide.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
+              <p className="mt-1 max-w-[60vw] text-xs leading-relaxed text-charcoal/70 md:mt-2 md:max-w-none md:text-sm">
                 {slide.description}
               </p>
             </div>
