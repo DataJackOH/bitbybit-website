@@ -7,23 +7,23 @@ const slides = [
   {
     src: "/screenshots/home.png",
     alt: "Home screen showing today's workout, upcoming sessions, and your goals",
-    title: "Your Daily Plan",
+    title: "A plan built just for you",
     description:
-      "See today\u2019s workout, what\u2019s coming next, and your current goals \u2014 all in one place.",
+      "Your workouts adapt to your goals, fitness level, and equipment \u2014 updated after every session.",
   },
   {
     src: "/screenshots/progress.png",
     alt: "Goals screen showing progression, top movements, and muscles worked",
-    title: "Watch Yourself Improve",
+    title: "Track real progress",
     description:
-      "Track your goals, see which muscles you\u2019re working, and watch your top movements grow.",
+      "See your streaks, personal records, and progression toward skills like your first pull-up.",
   },
   {
     src: "/screenshots/explore.png",
     alt: "Exercise library with 525 exercises, search, and category filters",
-    title: "525 Exercises",
+    title: "525 exercises and counting",
     description:
-      "Browse by category, difficulty, or search for any movement. Every exercise has detailed instructions.",
+      "Browse by category or difficulty. Every exercise has video demos and step-by-step instructions.",
   },
 ];
 

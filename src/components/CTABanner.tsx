@@ -6,11 +6,21 @@ export default function CTABanner() {
 
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-          Your bodyweight. Your goals. Your pace.
+          Start your free trial today
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          Start training smarter today — download free on iOS.
+          7 days free. Then from $9.99/month. Cancel anytime.
         </p>
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://apps.apple.com/app/bit-by-bit/id6756225068"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-sage transition-opacity duration-200 hover:opacity-90"
+          >
+            Download on the App Store
+          </a>
+        </div>
       </div>
     </section>
   );

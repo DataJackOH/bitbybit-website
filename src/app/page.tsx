@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Target, Footprints, Trophy } from "lucide-react";
+import { ChevronRight, Target, Footprints, Trophy, ClipboardList, Dumbbell, TrendingUp } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import ScrollReveal from "@/components/ScrollReveal";
 import AppShowcase from "@/components/AppShowcase";
@@ -56,7 +56,7 @@ export default function HomePage() {
                 Pull-ups, push-ups, planches, and more — no trainer needed.
               </p>
               <p className="mt-3 text-sm font-medium text-charcoal/60">
-                525 exercises · Infinite progressions · Free trial included
+                7 days free · Then from $9.99/mo · Cancel anytime
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
                 <a
@@ -95,8 +95,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Show Don't Tell — App in Action */}
+      {/* How It Works */}
       <section id="see-it-in-action" className="bg-white px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
+              How it works
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-charcoal/70">
+              Get started in under a minute. No account required.
+            </p>
+          </ScrollReveal>
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            <ScrollReveal>
+              <div className="text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-sage/10 text-sage">
+                  <ClipboardList size={24} />
+                </div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-charcoal">
+                  1. Set your goals
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
+                  Choose from pull-ups, push-ups, dips, squats, or handstands. Tell
+                  the app your level and equipment.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <div className="text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-coral/10 text-coral">
+                  <Dumbbell size={24} />
+                </div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-charcoal">
+                  2. Follow your plan
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
+                  Get a personalized workout built for you. Log sets, swap exercises,
+                  and rate difficulty as you go.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-sage/10 text-sage">
+                  <TrendingUp size={24} />
+                </div>
+                <h3 className="mt-4 font-heading text-lg font-bold text-charcoal">
+                  3. Watch yourself progress
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
+                  The app adapts after every session. Track streaks, personal records,
+                  and progression toward your goals.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* App in Action */}
+      <section className="bg-offwhite px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <ScrollReveal>
             <h2 className="text-center font-heading text-3xl font-bold text-charcoal">
