@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Apple } from "lucide-react";
 
 export default function CTABanner() {
   return (
@@ -18,14 +18,10 @@ export default function CTABanner() {
             href="https://apps.apple.com/app/bit-by-bit/id6756225068"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-base font-semibold text-sage transition-colors duration-200 hover:bg-white/90"
           >
-            <Image
-              src="/app-store-badge.svg"
-              alt="Download on the App Store"
-              width={150}
-              height={50}
-              className="h-[50px] w-auto brightness-0 invert"
-            />
+            <Apple size={18} />
+            Download Free on iOS
           </a>
         </div>
       </div>
