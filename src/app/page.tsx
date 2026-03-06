@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Target, Footprints, Trophy, Apple } from "lucide-react";
+import { ChevronRight, Target, Footprints, Trophy } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import ScrollReveal from "@/components/ScrollReveal";
 import AppShowcase from "@/components/AppShowcase";
@@ -63,10 +63,14 @@ export default function HomePage() {
                   href="https://apps.apple.com/app/bit-by-bit/id6756225068"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-3 text-base font-semibold text-white transition-colors duration-200 hover:bg-coral-dark"
                 >
-                  <Apple size={18} />
-                  Download Free on iOS
+                  <Image
+                    src="/app-store-badge.svg"
+                    alt="Download on the App Store"
+                    width={180}
+                    height={60}
+                    className="h-[60px] w-auto"
+                  />
                 </a>
                 <a
                   href="#see-it-in-action"
