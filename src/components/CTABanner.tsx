@@ -1,3 +1,5 @@
+import RegionalPrice from "@/components/RegionalPrice";
+
 export default function CTABanner() {
   return (
     <section className="relative overflow-hidden bg-sage px-6 py-20 md:py-28">
@@ -9,7 +11,7 @@ export default function CTABanner() {
           Start your free trial today
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          7 days free. Then from $9.99/month. Cancel anytime.
+          7 days free. Then from <RegionalPrice />. Cancel anytime.
         </p>
         <div className="mt-8 flex justify-center">
           <a
