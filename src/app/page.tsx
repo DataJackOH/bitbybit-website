@@ -80,9 +80,6 @@ export default function HomePage() {
                   <ChevronRight size={14} />
                 </a>
               </div>
-              <p className="mt-4 text-xs text-charcoal/60 sm:text-center md:text-left">
-                Available on iPhone · No credit card required
-              </p>
             </div>
 
             {/* Real app screenshot in device frame */}
