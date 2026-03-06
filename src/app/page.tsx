@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight, Target, Footprints, Trophy, ClipboardList, Dumbbell, TrendingUp } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
 import ScrollReveal from "@/components/ScrollReveal";
+import RegionalPrice from "@/components/RegionalPrice";
 import AppShowcase from "@/components/AppShowcase";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ const jsonLd = {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
     price: "0",
-    priceCurrency: "AUD",
+    priceCurrency: "USD",
   },
 };
 
@@ -56,7 +57,7 @@ export default function HomePage() {
                 Pull-ups, push-ups, planches, and more — no trainer needed.
               </p>
               <p className="mt-3 text-sm font-medium text-charcoal/60">
-                7 days free · Then from $9.99/mo · Cancel anytime
+                7 days free · Then from <RegionalPrice /> · Cancel anytime
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
                 <a
