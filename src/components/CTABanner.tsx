@@ -8,7 +8,7 @@ export default function CTABanner() {
 
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
-          Start your free trial today
+          Ready to start training?
         </h2>
         <p className="mt-4 text-lg text-white/80">
           7 days free. Then from <RegionalPrice />. Cancel anytime.
