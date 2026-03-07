@@ -32,21 +32,21 @@ export default function CountUp({ target, suffix = "" }: CountUpProps) {
           animate();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
 
     function animate() {
-      const duration = 1500;
+      const duration = 2000;
       const start = performance.now();
 
       function tick(now: number) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
-        // Ease-out cubic
-        const eased = 1 - Math.pow(1 - progress, 3);
+        // Ease-out quint
+        const eased = 1 - Math.pow(1 - progress, 5);
         setDisplay(Math.round(eased * target));
 
         if (progress < 1) {

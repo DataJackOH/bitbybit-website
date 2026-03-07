@@ -12,7 +12,6 @@ import {
   ClipboardList,
 } from "lucide-react";
 import CTABanner from "@/components/CTABanner";
-import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Features — Calisthenics Training App",
@@ -108,7 +107,7 @@ export default function FeaturesPage() {
           </div>
 
           {/* Hero Feature 1 — Personalized Plans */}
-          <ScrollReveal className="mt-20">
+          <div className="mt-20">
             <div className="flex flex-col items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
@@ -138,10 +137,10 @@ export default function FeaturesPage() {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Hero Feature 2 — Real-Time Adaptation */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
@@ -171,10 +170,10 @@ export default function FeaturesPage() {
                 </p>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Hero Feature 3 — Goal-Focused Progression */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <div className="flex flex-col items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
@@ -205,10 +204,10 @@ export default function FeaturesPage() {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Hero Feature 4 — Swap Exercises */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="mx-auto flex max-w-[560px] gap-4">
@@ -250,10 +249,10 @@ export default function FeaturesPage() {
                 </p>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Hero Feature 5 — Exercise Demos */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <div className="flex flex-col items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="inline-flex items-center gap-2 rounded-full bg-sage/10 px-3 py-1 text-xs font-semibold text-sage">
@@ -282,10 +281,10 @@ export default function FeaturesPage() {
                 </div>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Hero Feature 6 — Workout Feedback */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
               <div className="md:w-1/2">
                 <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
@@ -315,10 +314,10 @@ export default function FeaturesPage() {
                 </p>
               </div>
             </div>
-          </ScrollReveal>
+          </div>
 
           {/* Secondary Features — compact grid */}
-          <ScrollReveal className="mt-24">
+          <div className="mt-24">
             <h2 className="text-center font-heading text-2xl font-bold text-charcoal">
               Built for Real Training
             </h2>
@@ -348,7 +347,7 @@ export default function FeaturesPage() {
                 );
               })}
             </div>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 
