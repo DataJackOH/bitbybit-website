@@ -257,26 +257,26 @@ export default function HomePage() {
       <section className="bg-white px-6 py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-2xl border border-charcoal/[0.06] bg-offwhite px-6 py-10 md:px-12">
-            <div className="flex items-center justify-center gap-12 md:gap-20">
-              <div className="text-center">
-                <p className="font-heading text-5xl font-bold text-sage">
+            <div className="flex items-start justify-center gap-6 md:gap-20">
+              <div className="flex-1 text-center">
+                <p className="font-heading text-4xl font-bold text-sage md:text-5xl">
                   <CountUp target={525} />
                 </p>
-                <p className="mt-1 text-sm text-charcoal/60">Exercises</p>
+                <p className="mt-1 text-xs text-charcoal/60 md:text-sm">Exercises</p>
               </div>
-              <div className="text-center">
-                <p className="font-heading text-5xl font-bold text-sage">
+              <div className="flex-1 text-center">
+                <p className="font-heading text-4xl font-bold text-sage md:text-5xl">
                   <CountUp target={50} suffix="+" />
                 </p>
-                <p className="mt-1 text-sm text-charcoal/60">
+                <p className="mt-1 text-xs text-charcoal/60 md:text-sm">
                   Progression Chains
                 </p>
               </div>
-              <div className="text-center">
-                <p className="font-heading text-5xl font-bold text-sage">
+              <div className="flex-1 text-center">
+                <p className="font-heading text-4xl font-bold text-sage md:text-5xl">
                   <CountUp target={15} />
                 </p>
-                <p className="mt-1 text-sm text-charcoal/60">Skill Goals</p>
+                <p className="mt-1 text-xs text-charcoal/60 md:text-sm">Skill Goals</p>
               </div>
             </div>
           </div>
