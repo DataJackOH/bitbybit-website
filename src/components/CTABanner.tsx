@@ -20,7 +20,7 @@ export default function CTABanner() {
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-white px-8 py-3.5 text-base font-semibold text-sage shadow-lg transition-opacity duration-200 hover:opacity-90"
           >
-            Download on the App Store
+            Start Your Free Trial
           </a>
         </div>
       </div>
