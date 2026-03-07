@@ -6,6 +6,7 @@ import CTABanner from "@/components/CTABanner";
 import ScrollReveal from "@/components/ScrollReveal";
 import RegionalPrice from "@/components/RegionalPrice";
 import AppShowcase from "@/components/AppShowcase";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   alternates: {
@@ -266,26 +267,32 @@ export default function HomePage() {
 
       {/* Stats — Social Proof */}
       <section className="bg-white px-6 py-16 md:py-20">
-        <ScrollReveal>
-          <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-3xl">
+          <div className="rounded-2xl border border-charcoal/[0.06] bg-offwhite px-6 py-10 md:px-12">
             <div className="flex items-center justify-center gap-12 md:gap-20">
               <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-sage">525</p>
+                <p className="font-heading text-5xl font-bold text-sage">
+                  <CountUp target={525} />
+                </p>
                 <p className="mt-1 text-sm text-charcoal/60">Exercises</p>
               </div>
               <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-sage">50+</p>
+                <p className="font-heading text-5xl font-bold text-sage">
+                  <CountUp target={50} suffix="+" />
+                </p>
                 <p className="mt-1 text-sm text-charcoal/60">
                   Progression Chains
                 </p>
               </div>
               <div className="text-center">
-                <p className="font-heading text-4xl font-bold text-sage">5</p>
+                <p className="font-heading text-5xl font-bold text-sage">
+                  <CountUp target={5} />
+                </p>
                 <p className="mt-1 text-sm text-charcoal/60">Skill Goals</p>
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </div>
       </section>
 
       {/* Built By — Founder Story */}
