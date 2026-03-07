@@ -43,7 +43,6 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden px-6 pb-20 pt-20 md:pb-28 md:pt-28">
         <div className="pointer-events-none absolute right-0 top-0 h-[600px] w-[600px] -translate-y-1/4 translate-x-1/4 rounded-full bg-sage opacity-[0.07] blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-0 h-[500px] w-[500px] -translate-x-1/4 translate-y-1/4 rounded-full bg-coral opacity-[0.07] blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
           <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">

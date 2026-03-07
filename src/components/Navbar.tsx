@@ -28,7 +28,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-charcoal/5 bg-offwhite/90 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-charcoal/10 bg-offwhite/90 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-heading text-2xl font-bold text-charcoal">
           bit by bit

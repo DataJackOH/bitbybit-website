@@ -76,7 +76,7 @@ export default function AppShowcase() {
         tabIndex={0}
         role="region"
         aria-label="App screenshots"
-        className="scrollbar-hide -mx-6 mt-16 flex gap-6 overflow-x-auto px-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 pb-4 md:pb-0"
+        className="scrollbar-hide -mx-6 mt-16 flex gap-6 overflow-x-auto px-[17.5vw] snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 pb-4 md:pb-0"
       >
         {slides.map((slide, i) => (
           <div
