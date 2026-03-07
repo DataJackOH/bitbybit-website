@@ -68,6 +68,10 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   metadataBase: new URL("https://bitbybit.fit"),
+  themeColor: "#F9F7F4",
+  itunes: {
+    appId: "6756225068",
+  },
 };
 
 const organizationJsonLd = {
