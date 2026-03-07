@@ -6,7 +6,7 @@ import Image from "next/image";
 const slides = [
   {
     src: "/screenshots/home.png",
-    alt: "Home screen showing today's workout, upcoming sessions, and your goals",
+    alt: "Home screen showing today's workout with exercise tags, next session, and your goals for Push-ups and Pull-ups",
     title: "A plan built just for you",
     description:
       "Your workouts adapt to your goals, fitness level, and equipment \u2014 updated after every session.",

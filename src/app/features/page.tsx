@@ -195,7 +195,7 @@ export default function FeaturesPage() {
                 <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
                   <Image
                     src="/screenshots/swap.png"
-                    alt="Goal progression screen showing skill ladder from beginner to advanced"
+                    alt="Push-ups progress screen showing bit goals progression chain and workout stats"
                     width={603}
                     height={1191}
                     className="w-full"
@@ -272,7 +272,7 @@ export default function FeaturesPage() {
                 <div className="mx-auto max-w-[280px] overflow-hidden rounded-3xl border border-charcoal/[0.06] shadow-lg transition-transform duration-300 hover:scale-[1.02]">
                   <Image
                     src="/screenshots/exercise-detail.png"
-                    alt="Exercise detail screen showing video demo, step-by-step instructions, and muscles worked"
+                    alt="Standard Push-ups exercise detail showing video demo, step-by-step instructions, and difficulty level"
                     width={603}
                     height={1191}
                     className="w-full"
