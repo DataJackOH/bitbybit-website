@@ -447,10 +447,10 @@ export default function PrivacyPage() {
             <p className="mt-3">
               To exercise these rights, contact us at{" "}
               <a
-                href="mailto:privacy@bitbybit.fit"
+                href="mailto:dataanalystjack@gmail.com"
                 className="font-medium text-sage underline"
               >
-                privacy@bitbybit.fit
+                dataanalystjack@gmail.com
               </a>
               . We&apos;ll respond within 30 days.
             </p>
@@ -551,10 +551,10 @@ export default function PrivacyPage() {
             <p className="mt-3">
               <strong>Email:</strong>{" "}
               <a
-                href="mailto:privacy@bitbybit.fit"
+                href="mailto:dataanalystjack@gmail.com"
                 className="font-medium text-sage underline"
               >
-                privacy@bitbybit.fit
+                dataanalystjack@gmail.com
               </a>
             </p>
             <p className="mt-3">
