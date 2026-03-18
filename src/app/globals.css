@@ -97,3 +97,127 @@ body {
     opacity: 1;
   }
 }
+
+/* Blog prose styles */
+.prose {
+  color: var(--color-charcoal);
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.prose > *:last-child {
+  margin-bottom: 0;
+}
+
+.prose h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(51, 51, 51, 0.06);
+  color: var(--color-charcoal);
+}
+
+.prose h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.prose h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-charcoal);
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose li::marker {
+  color: var(--color-sage);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.prose a {
+  color: var(--color-sage);
+  text-decoration: underline;
+  text-decoration-color: rgba(128, 149, 109, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+.prose a:hover {
+  color: var(--color-sage-dark);
+  text-decoration-color: var(--color-sage-dark);
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-sage);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: rgba(51, 51, 51, 0.7);
+  font-style: italic;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(51, 51, 51, 0.08);
+  margin: 2.5rem 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+}
+
+.prose thead th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(51, 51, 51, 0.5);
+  text-align: left;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.08);
+}
+
+.prose tbody td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.05);
+  vertical-align: top;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}

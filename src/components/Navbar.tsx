@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/features", label: "Features" },
+  { href: "/blog", label: "Blog" },
   { href: "/support", label: "Support" },
 ];
 
@@ -37,7 +38,10 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
             return (
               <Link
                 key={link.href}
@@ -90,7 +94,10 @@ export default function Navbar() {
           />
           <div className="relative z-50 border-t border-charcoal/5 bg-offwhite px-6 py-4 md:hidden">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}

@@ -56,6 +56,12 @@ export default function Footer() {
                 Features
               </Link>
               <Link
+                href="/blog"
+                className="text-sm text-white/60 transition-colors hover:text-white"
+              >
+                Blog
+              </Link>
+              <Link
                 href="/support"
                 className="text-sm text-white/60 transition-colors hover:text-white"
               >
