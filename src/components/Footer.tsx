@@ -71,6 +71,18 @@ export default function Footer() {
 
             <div className="flex flex-col gap-3">
               <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
+                Contact
+              </p>
+              <a
+                href="mailto:dataanalystjack@gmail.com"
+                className="text-sm text-white/60 transition-colors hover:text-white"
+              >
+                dataanalystjack@gmail.com
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/40">
                 Legal
               </p>
               <Link

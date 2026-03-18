@@ -118,6 +118,23 @@ export default function SupportPage() {
               ))}
             </div>
           </div>
+
+          {/* Contact Section */}
+          <div className="mt-16">
+            <h2 className="font-heading text-2xl font-bold text-charcoal">
+              Contact
+            </h2>
+            <p className="mt-4 text-lg text-charcoal/70">
+              Have feedback, questions, or just want to say hi? We&apos;d love
+              to hear from you.
+            </p>
+            <a
+              href="mailto:dataanalystjack@gmail.com"
+              className="mt-3 inline-block text-lg font-medium text-coral transition-colors hover:text-coral-dark"
+            >
+              dataanalystjack@gmail.com
+            </a>
+          </div>
         </div>
       </section>
 
