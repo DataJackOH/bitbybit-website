@@ -11,7 +11,7 @@ export default function CTABanner() {
           Ready to start training?
         </h2>
         <p className="mt-4 text-lg text-white/80">
-          7 days free. Then from <RegionalPrice />. Cancel anytime.
+          1 month free. Then from <RegionalPrice />. Cancel anytime.
         </p>
         <div className="mt-8 flex justify-center">
           <a

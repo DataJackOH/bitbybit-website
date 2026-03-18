@@ -57,7 +57,7 @@ export default function HomePage() {
                 Pull-ups, push-ups, planches, and more — no trainer needed.
               </p>
               <p className="mt-3 text-sm font-medium text-charcoal/60">
-                7 days free · Then from <RegionalPrice /> · Cancel anytime
+                1 month free · Then from <RegionalPrice /> · Cancel anytime
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
                 <a
