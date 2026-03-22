@@ -129,10 +129,10 @@ export default function SupportPage() {
               to hear from you.
             </p>
             <a
-              href="mailto:dataanalystjack@gmail.com"
+              href="mailto:support@bitbybit.fit"
               className="mt-3 inline-block text-lg font-medium text-coral transition-colors hover:text-coral-dark"
             >
-              dataanalystjack@gmail.com
+              support@bitbybit.fit
             </a>
           </div>
         </div>

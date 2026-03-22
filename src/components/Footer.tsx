@@ -74,10 +74,10 @@ export default function Footer() {
                 Contact
               </p>
               <a
-                href="mailto:dataanalystjack@gmail.com"
+                href="mailto:support@bitbybit.fit"
                 className="text-sm text-white/60 transition-colors hover:text-white"
               >
-                dataanalystjack@gmail.com
+                support@bitbybit.fit
               </a>
             </div>
 

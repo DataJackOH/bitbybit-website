@@ -418,10 +418,10 @@ export default function TermsPage() {
             <p className="mt-3">
               <strong>Email:</strong>{" "}
               <a
-                href="mailto:dataanalystjack@gmail.com"
+                href="mailto:support@bitbybit.fit"
                 className="font-medium text-sage underline"
               >
-                dataanalystjack@gmail.com
+                support@bitbybit.fit
               </a>
             </p>
             <p className="mt-3">
