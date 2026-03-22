@@ -22,8 +22,7 @@ export default function PrivacyPage() {
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-charcoal/70">
           <p>
             bit by bit (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a
-            calisthenics training app operated by Tobey Lee Hahn Speck (ABN 13
-            904 149 472), based in Australia. This privacy policy explains what
+            calisthenics training app based in Australia. This privacy policy explains what
             data we collect, how we use it, and your rights.
           </p>
           <p>
@@ -558,10 +557,6 @@ export default function PrivacyPage() {
               </a>
             </p>
             <p className="mt-3">
-              Tobey Lee Hahn Speck
-              <br />
-              ABN 13 904 149 472
-              <br />
               Australia
             </p>
           </div>

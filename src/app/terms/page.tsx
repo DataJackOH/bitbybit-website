@@ -24,8 +24,8 @@ export default function TermsPage() {
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-charcoal/70">
           <p>
             These Terms of Service (&quot;Terms&quot;) govern your use of the bit
-            by bit mobile application (&quot;the App&quot;), operated by Tobey
-            Lee Hahn Speck (ABN 13 904 149 472), based in Australia.
+            by bit mobile application (&quot;the App&quot;), operated by
+            bit by bit, based in Australia.
           </p>
           <p>
             By creating an account or using the App, you agree to these Terms. If
@@ -210,7 +210,7 @@ export default function TermsPage() {
             </h2>
             <p className="mt-3">
               The App, including its design, code, content, exercise
-              descriptions, and branding, is owned by Tobey Lee Hahn Speck and
+              descriptions, and branding, is owned by bit by bit and
               protected by copyright and other intellectual property laws.
             </p>
             <p className="mt-3">
@@ -425,10 +425,6 @@ export default function TermsPage() {
               </a>
             </p>
             <p className="mt-3">
-              Tobey Lee Hahn Speck
-              <br />
-              ABN 13 904 149 472
-              <br />
               Australia
             </p>
           </div>
